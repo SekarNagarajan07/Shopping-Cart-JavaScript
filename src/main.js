@@ -2,28 +2,28 @@ let shop = document.getElementById("shop");
 
 let shopItemData = [
   {
-    id: "1",
+    id: "liegjljwehg",
     name: "Casual Shirt",
     price: 45,
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit architecto, culpa illum autem iste nihil",
     img: "images/image1.png",
   },
   {
-    id: "2",
+    id: "lkvnlJ",
     name: "Shirt",
     price: 25,
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit architecto, culpa illum autem iste nihil",
     img: "images/image2.png",
   },
   {
-    id: "3",
+    id: "KLFNLKvnj",
     name: "blue Shirt",
     price: 25,
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit architecto, culpa illum autem iste nihil",
     img: "images/image3.png",
   },
   {
-    id: "4",
+    id: "djnawjghj",
     name: "Checked Shirt",
     price: 34,
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit architecto, culpa illum autem iste nihil",
@@ -35,8 +35,8 @@ let basket = [];
 
 let generateShop = () => {
   return (shop.innerHTML = shopItemData
-    .map((e) => {
-      let { id, name, price, desc, img } = e;
+    .map((x) => {
+      let { id, name, price, desc, img } = x;
       return `<div id=product-id-${id} class="item">
     <img width="220" src=${img} alt="" />
     <div class="details">
@@ -73,7 +73,8 @@ let increment = (id) => {
     search.item += 1;
   }
 
-  console.log(basket);
+  // console.log(basket);
+  update(selectedItem.id);
 };
 let decrement = (id) => {
   let selectedItem = id;
@@ -84,6 +85,16 @@ let decrement = (id) => {
     search.item -= 1;
   }
 
-  console.log(basket);
+  // console.log(basket);
+  update(selectedItem.id);
 };
-let update = () => {};
+let update = (id) => {
+  let search = basket.find((x) => x.id === id);
+  console.log(search);
+  document.getElementById(id).innerHTML = search.item;
+  calculation();
+};
+
+let calculation = () => {
+  console.log("calculation");
+};
