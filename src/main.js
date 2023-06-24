@@ -17,14 +17,14 @@ let shopItemData = [
   },
   {
     id: "KLFNLKvnj",
-    name: "blue Shirt",
+    name: "white T-Shirt",
     price: 25,
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit architecto, culpa illum autem iste nihil",
     img: "images/image3.png",
   },
   {
     id: "djnawjghj",
-    name: "Checked Shirt",
+    name: "Blue T-Shirt",
     price: 34,
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit architecto, culpa illum autem iste nihil",
     img: "images/image4.png",
@@ -45,7 +45,7 @@ let generateShop = () => {
         ${desc}
       </p>
       <div class="price-quantity">
-        <h2>${price}</h2>
+        <h2>$ ${price}</h2>
         <div class="button">
           <i onclick = "decrement(${id})" class="bi bi-dash-lg"></i>
           <div id=${id} class="quantity">0</div>
@@ -96,5 +96,7 @@ let update = (id) => {
 };
 
 let calculation = () => {
-  console.log("calculation");
+  let cartIcon = document.getElementById("cartAmount");
+  // console.log(basket);
+  cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0);
 };
