@@ -92,7 +92,7 @@ a {
   align-items: center;
 }
 
-.button {
+.buttons {
   display: flex;
   flex-direction: row;
   gap: 8px;
@@ -129,13 +129,13 @@ a {
 }
 
 .checkout {
-  background-color: green;
+  background-color: #1b4332;
 }
 .removeAll {
-  background-color: red;
+  background-color: #d00000;
 }
 .bi-x-lg {
-  color: red;
+  color: #d00000;
   font-weight: bold;
 }
 
