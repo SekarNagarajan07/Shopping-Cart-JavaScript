@@ -106,3 +106,22 @@ a {
 .bi-plus-lg {
   color: #1b4332;
 }
+
+/**
+* ! style rules for label and some buttons
+**/
+
+.text-center {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.HomeBtn {
+  background-color: #023e7d;
+  color: #fffcf2;
+  border: none;
+  padding: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+}
