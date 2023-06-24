@@ -9,6 +9,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+i {
+  cursor: pointer;
+}
+
 /**
 * ! Navbar Style
 **/
